@@ -8,7 +8,7 @@ import "./interfaces/IERC900.sol";
 /**
  * An IERC900 staking contract
  */
-contract StakingERC20 is IERC900  {
+contract StakingERC20Simple is IERC900  {
     using SafeERC20 for IERC20;
 
     /// @dev handle to access ERC20 token token contract to make transfers
