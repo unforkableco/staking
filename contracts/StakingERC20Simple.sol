@@ -101,7 +101,7 @@ contract StakingERC20Simple is IERC900  {
         @dev Returns the current total of tokens staked
         @return the total of staked tokens
     */
-    function totalStaked() external view override returns (uint256) {
+    function totalStaked() external view override virtual returns (uint256) {
         return staking_contract.totalStaked();
     }
 
