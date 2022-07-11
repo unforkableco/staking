@@ -12,7 +12,7 @@ contract StakingERC20Simple is IERC900  {
     using SafeERC20 for IERC20;
 
     /// @dev handle to access ERC20 token token contract to make transfers
-    IERC20 private _token;
+    IERC20 internal _token;
     Distribute immutable public staking_contract;
 
     event Profit(uint256 amount);
