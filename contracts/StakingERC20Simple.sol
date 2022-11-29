@@ -39,7 +39,7 @@ contract StakingERC20Simple is IERC900  {
         IERC20 rewardToken = IERC20(staking_contract.reward_token());
         uint256 balance = rewardToken.balanceOf(address(this));
         if(balance > 0) {
-            rewardToken.approve(address(staking_contract), balance);
+            rewardToken.safeApprove(address(staking_contract), balance);
             staking_contract.distribute(balance, address(this));
             emit Profit(balance);
         }
